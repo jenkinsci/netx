@@ -1,2 +1,4 @@
 syntax: glob
+*.jar
+hotspot.log
 javadoc

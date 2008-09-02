@@ -17,7 +17,7 @@
     <!-- compile -->
     <target name="compile" depends="init">
         <mkdir dir="${classes}"/>
-        <javac destdir="${classes}" srcdir="${src}" optimize="false" debug="true" deprecation="false"/>
+        <javac destdir="${classes}" srcdir="${src}" source="1.2" target="1.2" optimize="false" debug="true" deprecation="false"/>
         <copy todir="${classes}">
             <fileset dir="${src}">
                <include name="**/resources/*"/>

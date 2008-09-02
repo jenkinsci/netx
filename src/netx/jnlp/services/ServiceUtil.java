@@ -17,13 +17,9 @@
 
 package netx.jnlp.services;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
 import java.lang.reflect.*;
 import java.security.*;
 import javax.jnlp.*;
-import netx.jnlp.*;
 import netx.jnlp.runtime.*;
 
 /**

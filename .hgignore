@@ -1,4 +1,8 @@
 syntax: glob
+classes
+*.ipr
+*.iws
+*.iml
 *.jar
 hotspot.log
 javadoc

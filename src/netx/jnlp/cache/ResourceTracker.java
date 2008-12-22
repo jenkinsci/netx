@@ -570,6 +570,7 @@ public class ResourceTracker {
     private void processResource(Resource resource) {
         boolean doConnect = false;
         boolean doDownload = false;
+        boolean doQueue = false;
 
         synchronized (resource) {
             if (resource.isSet(CONNECTING))
@@ -582,11 +583,13 @@ public class ResourceTracker {
             // return to queue if we just initalized but it still needs
             // to download (not cached locally / out of date)
             if (resource.isSet(DOWNLOAD)) // would be DOWNLOADING if connected before this method
-                queueResource(resource);
+                doQueue = true;
 
             if (resource.isSet(DOWNLOADING))
                 doDownload = true;
         }
+        if (doQueue)
+            queueResource(resource);
         if (doDownload)
             downloadResource(resource);
     }

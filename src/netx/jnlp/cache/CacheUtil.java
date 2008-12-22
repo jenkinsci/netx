@@ -294,6 +294,8 @@ public class CacheUtil {
         path.append(File.separatorChar);
         path.append(location.getHost());
         path.append(File.separatorChar);
+        path.append(location.getPort());
+        path.append(File.separatorChar);
         path.append(location.getPath().replace('/', File.separatorChar));
 
         return new File(JNLPRuntime.getBaseDir(), fixPath(path.toString()));

@@ -60,11 +60,7 @@
 
     <!-- clean -->
     <target name="clean" depends="init">
-        <delete>
-            <fileset dir="${classes}">
-                <include name="**/*"/>
-            </fileset>
-        </delete>
+	    <delete dir="${classes}" />
         <delete>
             <fileset dir="${src}">
                 <include name="**/*.java~"/>
